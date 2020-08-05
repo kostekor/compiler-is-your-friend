@@ -70,3 +70,7 @@ Question:
 1) What did you learn from this problem? Why would we want to refactor the code to be
 like the Composable implementation?
 */
+
+/**
+ * 1. Composable implementation has compact and reuseable type. The same error can be handled easily.
+ */
