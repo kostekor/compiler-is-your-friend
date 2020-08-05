@@ -5,13 +5,13 @@ The function below is a "safe divide" function. That is, it promises not to thro
 
 Questions:
 1) Spot and describe the cause of the bug that causes the "divide by zero" to occur.
-2) Now, make a *single* code change on line 12:
+2) Now, make a *single* code change on line 14:
 2.1) without changing the number 42;
 2.2) such that cause of the bug can be spotted by the compiler at *compile time*.
 3) What did you learn from this exercise?
 */
 function safeDivide(): number {
-    let x: number = 42;
+    const x: number = 42;
 
     if (x == 0) throw new Error("x should not be 0");
 
@@ -19,3 +19,10 @@ function safeDivide(): number {
 
     return 42 / x;
 }
+
+console.log(safeDivide());
+
+/**
+ * 1. x is reassigned with x - 42 which make x to equal 0
+ * 3. the correct variable declaration prevent to modify variable after pass criteria
+ */
